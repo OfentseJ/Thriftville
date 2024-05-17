@@ -1,0 +1,33 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+<section class="n-product">
+    <div class="center-text" data-aos="zoom-in">
+        <br>
+        <h2>All Products</h2>
+    </div>
+    
+    <div class="n-content">
+        {% for product in products %}
+        <div class="row" data-aos="fade-in">
+            <div class="row-img">
+                <img src="{{product.imageURL}}" alt="">
+            </div>
+            <h3>{{product.name}}</h3>
+            <div class="row-in">
+                <div class="row-left">
+                    <a href="#" data-product="{{product.id}}" data-action="add" class="update-cart">
+                        Add to cart
+                        <i class="ri-shopping-cart-fill"></i>
+                    </a>
+                </div>
+                <div class="row-right">
+                    <h6>R{{product.price|floatformat:2}}</h6>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock content%}

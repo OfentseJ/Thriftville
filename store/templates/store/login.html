@@ -1,0 +1,26 @@
+
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+<section class="login-section">
+    <br>
+    <div class="login-container" data-aos="fade-up">
+        <h2>Login</h2>
+        <form action="/login" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn3">Login</button>
+            <div class="register--link">
+                <p>Not a member?<a href="{% url 'register' %}">Sign up now</a></p>
+            </div>
+        </form> 
+    </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,109 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+    <!-- home -->
+    <section class="home">
+        <div class="home-text" data-aos="fade-up">
+            <h6>New Arrivals</h6>
+            <h1>Nostalgic Finds <br> Discover your style</h1>
+            <p>
+                Welcome to Thriftville, where style meets savings. Discover thrifted treasures at a low cost.
+            </p>
+            <a href="{% url 'shop' %}" class="btn">
+                Shop now
+                <i class="ri-arrow-right-line"></i>
+            </a>
+        </div>
+    </section>
+        
+    <!-- all products -->
+    <section class="n-product">
+        <div class="center-text" data-aos="zoom-in">
+            <h2>All Products</h2>
+        </div>
+
+        <div class="n-content">
+            {% for product in products|slice:":8" %}
+            <div class="row" data-aos="fade-in">
+                <div class="row-img">
+                    <img src="{{product.imageURL}}" alt="">
+                </div>
+                <h3>{{product.name}}</h3>
+                <div class="row-in">
+                    <div class="row-left">
+                        <a href="#" data-product="{{product.id}}" data-action="add" class="update-cart">
+                            Add to cart
+                            <i class="ri-shopping-cart-fill"></i>
+                        </a>
+                    </div>
+                    <div class="row-right">
+                        <h6>R{{product.price|floatformat:2}}</h6>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="n-btn" data-aos="zoom-in">
+            <a href="{% url 'shop' %}" class="btn2">View All</a>
+        </div>
+    </section>
+
+    <!-- feature -->
+    <section class="feature">
+        <div class="feature-content" data-aos="fade-down">
+            <div class="box">
+                <div class="f-icon">
+                    <i class="ri-bank-card-fill"></i>
+                </div>
+
+                <div class="f-text">
+                    <h3>Payment Options</h3>
+                    <p>
+                        We offer multiple payment options, including Instant EFT, e-wallet, and cash on collection.
+                    </p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="f-icon">
+                    <i class="ri-box-3-fill"></i>
+                </div>
+
+                <div class="f-text">
+                    <h3>Collect</h3>
+                    <p>
+                        If you've placed an order via Instagram, you have the option to collect your products. Find our address in our bio or on our <a href="#">About page</a>."
+                    </p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="f-icon">
+                    <i class="ri-truck-fill"></i>
+                </div>
+
+                <div class="f-text">
+                    <h3>Delivery Options</h3>
+                    <p>
+                        We offer delivery through Aremax and Paxi. Simply select your preferred option during checkout.
+                    </p>
+                </div>
+            </div>
+    </section> 
+        
+    <!-- Newsletter --> 
+    <section class="newsletter">
+        <div class="newsletter-content" data-aos="zoom-in">
+            <div class="newsletter-text">
+                <h2>Get on the list!</h2>
+                <p>Sign up with your email address to receive updates.</p>
+            </div>
+
+            <form action="">
+                <input type="email" placeholder="Your email..." required>
+                <input type="submit" value="Subscribe" class="btnnn">
+            </form>
+        </div>
+    </section>
+    
+{% endblock content%}
