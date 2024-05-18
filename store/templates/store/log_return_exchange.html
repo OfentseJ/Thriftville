@@ -1,0 +1,25 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+    <div class="container">
+        <h1>Log a Return or Exchange</h1>
+        <form method="post">
+            {% csrf_token %}
+            <label for="item_quality">Item Quality:</label>
+            <input type="text" name="item_quality" id="item_quality">
+          
+            <label for="item_price">Item Price:</label>
+            <input type="text" name="item_price" id="item_price">
+          
+            <label for="item_pictures">Item Pictures:</label>
+            <input type="file" name="item_pictures" id="item_pictures">
+          
+            <label for="email">Your Email:</label>
+            <input type="email" name="email" id="email">
+            <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+            <button type="submit">Send</button>
+            <!-- CSRF token if needed -->
+            <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+        </form>
+    </div>
+{% endblock content%}

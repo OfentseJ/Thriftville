@@ -1,0 +1,22 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+<!-- about section -->
+<section class="home">
+    <div class="home-text" data-aos="fade-up">
+        <h2>About us</h2>
+        <h4>Welcome to Thriftville, where every purchase tells a story. At Thriftville,
+            we're not just another online thrift store; we're a vibrant community passionate about sustainability, style, and second chances. Our shelves are stocked with carefully curated treasures,
+             each item handpicked for its quality, character, and charm. Founded on the belief that fashion should be both affordable and eco-friendly,
+              we're on a mission to redefine the way you shop. By giving pre-loved garments a new lease on life, we're not only reducing waste but also celebrating individuality and self-expression. 
+              Join us in our pursuit of fashion with a conscience, where every click makes a positive impact.
+               Explore Thriftville today and discover timeless pieces that tell your unique story </h4>
+        <h1>Discover your style</h1>
+
+        <a href="{% url 'shop' %}" class="btn">
+            Shop now
+            <i class="ri-arrow-right-line"></i>
+        </a>
+    </div>
+</section>
+{% endblock content%}

@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    'rest_framework',
     'store.apps.StoreConfig',
 ]
 
@@ -68,6 +68,11 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',  
+    'store.authentication_backends.EmailAuthBackend', 
 ]
 
 WSGI_APPLICATION = 'thriftville.wsgi.application'
@@ -136,3 +141,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/img')
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'thriftville.inbox@gmail.com'  # Your Gmail address
+EMAIL_HOST_PASSWORD = 'humxntxspknjadxu'  # Your Gmail password or app password

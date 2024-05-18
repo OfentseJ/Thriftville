@@ -1,0 +1,39 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+<div class="profile">
+    <h1>Profile</h1>
+    <p>
+        -
+        --
+        -
+    </p>
+    <ul style="margin-top: 20px;">
+        <li style="margin-bottom: 10px;">
+            <a href="{% url 'edit_account' %}" style="color: black; text-decoration: none; transition: color 0.3s, text-shadow 0.3s;">
+                Account Info
+            </a>
+        </li>
+        <li style="margin-bottom: 10px;">
+            <a href="{% url 'track_order' %}" style="color: black; text-decoration: none; transition: color 0.3s, text-shadow 0.3s;">
+                Track Order
+            </a>
+        </li>
+        <li style="margin-bottom: 10px;">
+            <a href="{% url 'log_return_exchange' %}" style="color: black; text-decoration: none; transition: color 0.3s, text-shadow 0.3s;">
+                Log a return or exchange
+            </a>
+        </li>
+        <li style="margin-bottom: 10px;">
+            <a href="{% url 'help_center' %}" style="color: black; text-decoration: none; transition: color 0.3s, text-shadow 0.3s;">
+                Help center
+            </a>
+        </li>
+        <li style="margin-bottom: 10px;">
+            <a href="{% url 'logout' %}" style="color: black; text-decoration: none; transition: color 0.3s, text-shadow 0.3s;">
+                Log out
+            </a>
+        </li>
+    </ul>
+</div>
+{% endblock content%}

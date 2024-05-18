@@ -226,6 +226,11 @@ header{
     transition: all .6s;
 }
 
+.bg-dark{
+	background-color: #4f868c!important;
+}
+
+
 .navlist a:hover{
     transform: translateY(-4px);
     color-scheme: var(--second-color);
@@ -266,6 +271,47 @@ header{
 
 section{
     padding: 90px 14% 70px;
+}
+
+.n-contact{
+    background-color: #000000;
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.contact-text {
+    padding-top: 60px;
+}
+
+.contact-text h1{
+    font-size: var(--h1-font);
+    color: var(--bg-color);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.contact-text h3{
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--bg-color);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.contact-text p{
+    width: 100%;
+    max-width: 560;
+    font-size: var(--p-font);
+    font-weight: 400;
+    color: var(--second-color);
+    line-height: 33px;
+    margin-bottom: 35px;
 }
 
 .home{
@@ -542,6 +588,7 @@ section{
     margin-bottom: 30px;
 }
 
+
 .form-group {
     margin-bottom: 20px;
 }
@@ -666,6 +713,129 @@ section{
     justify-content: flex-start;
 }
 
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--main-color);
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+}
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    font-size: var(--h1-font);
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--second-color);
+}
+
+.container label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--second-color);
+}
+
+.container input[type="text"],
+.container input[type="email"],
+.container input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: var(--p-font);
+}
+
+.container button[type="submit"] {
+    padding: 12px 30px;
+    background-color: var(--other-color);
+    color: var(--bg-color);
+    font-size: var(--p-font);
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container button[type="submit"]:hover {
+    background-color: var(--second-color);
+}
+
+.t-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+.t-container h1 {
+    text-align: center;
+}
+.order-list {
+    list-style-type: none;
+    padding: 0;
+}
+.order-item {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.profile{
+    height: 80vh;
+}
 
 @media(max-width: 1610px){
     header{

@@ -1,12 +1,12 @@
 
-{% extends 'store/main.html' %}
+{% extends 'store/index.html' %}
 {% load static %}
 {% block content %}
 <section class="login-section">
     <br>
     <div class="login-container" data-aos="fade-up">
         <h2>Login</h2>
-        <form action="/login" method="post">
+        <form action="/login/" method="post">
             {% csrf_token %}
             <div class="form-group">
                 <label for="email">Email:</label>
@@ -16,9 +16,10 @@
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <button type="submit" class="btn3">Login</button>
+            <button type="submit" class="btn">Login</button>
             <div class="register--link">
                 <p>Not a member?<a href="{% url 'register' %}">Sign up now</a></p>
+                <p><a href="{% url 'reset_password' %}">Forgot your password?</a></p>
             </div>
         </form> 
     </div>

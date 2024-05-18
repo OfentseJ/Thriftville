@@ -1,0 +1,21 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+    <div class="t-container">
+        <h1>Track Your Orders</h1>
+        {% if confirmed_orders %}
+            <ul class="order-list">
+                {% for order in confirmed_orders %}
+                    <li class="order-item">
+                        <h2>Order Details</h2>
+                        <p><strong>Transaction ID:</strong> {{ order.transaction_id }}</p>
+                        <p><strong>Date Ordered:</strong> {{ order.date_ordered }}</p>
+                        <!-- Add any additional order details here -->
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>{{ message }}</p>
+        {% endif %}
+    </div>
+{% endblock content%}
